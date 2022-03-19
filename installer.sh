@@ -10,8 +10,8 @@ echo "Are you sure you want to continue? (y/n)"
 read answer
 if [ "$answer" != "y" ]; then
     echo "The installation wil be aborted. Remove the installation files? (~/pi-apps-python) (y/n)"
-    read answer
-    if [ "$answer" != "y" ]; then
+    read answer1
+    if [ "$answer1" != "y" ]; then
         echo "The installation has been aborted, but files have been preserved."
         exit
     fi
@@ -43,9 +43,12 @@ sudo cp pi-apps-python.desktop /usr/share/applications/
 echo -e "\033[32m😀 Desktop shortcut has been installed! Installation Complete!\033[0m"
 echo -e "\033[32m😀 You can now run the Pi Apps for Python front-end by selecting 'Pi Apps for Python' in the menu. (don't think it works right now though, you might have to run it with python3 ~/pi-apps/gui.py)\033[0m"
 echo -e "\033[32m🙏 Thank you for installing Pi Apps for Python! Would you like to remove the installation files? (~/pi-apps-python) (y/n)\033[0m"
-read answer
-if [ answer != "y" ]; then
-    echo "Installation files will be preserved. Bye!"
+read answer2
+if [ answer2 == "y" ]; then
+    echo "Removing..."
+    rm -rf $HOME/pi-apps-python
+    echo "Files have been removed. Bye!"
     exit
 fi
-rm -rf $HOME/pi-apps-python 
+echo "Installation files will be preserved. Bye!"
+    exit
