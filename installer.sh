@@ -3,13 +3,21 @@ echo -e "\033[36mWelcome to the Pi Apps for Python installer. This will install 
 echo "This installer will install or update the following:"
 echo " - Python3 (if not already installed)"
 echo " - guizero (through pip3, if not already installed)"
-echo " - pi-apps (if npt already installed)"
+echo " - pi-apps (if not already installed)"
 echo " - Pi Apps for Python (will be moved to ~/pi-apps)"
 echo " - A desktop shortcut to the Pi Apps for Python front-end will be installed in /usr/share/applications"
 echo "Are you sure you want to continue? (y/n)"
 read answer
 if [ "$answer" != "y" ]; then
-    echo "The install has been aborted."
+    echo "The installation wil be aborted. Remove the installation files? (~/pi-apps-python) (y/n)"
+    read answer
+    if [ "$answer" != "y" ]; then
+        echo "The installation has been aborted, but files have been preserved."
+        exit
+    fi
+    echo "Removing..."
+    rm -rf $HOME/pi-apps-python
+    echo "Files have been removed, and the installation has been aborted."
     exit
 fi
 command -v apt >/dev/null || error "\033[31mYou are not running Debian or a deriatve of it. This installer is for Debian based systems.\033[0m"
@@ -33,5 +41,11 @@ echo -e "\033[32m😀 Pi-Apps for Python has been moved to ~/pi-apps! Continuing
 echo -e "\033[34m↔ Installing desktop shortcut...\033[0m"
 sudo cp pi-apps-python.desktop /usr/share/applications/
 echo -e "\033[32m😀 Desktop shortcut has been installed! Installation Complete!\033[0m"
-echo -e "\033[32m😀 You can now run the Pi Apps for Python front-end by selecting 'Pi Apps for Python' in the menu.\033[0m"
-echo -e "\033[32m🙏 Thank you for installing Pi Apps for Python!\033[0m"
+echo -e "\033[32m😀 You can now run the Pi Apps for Python front-end by selecting 'Pi Apps for Python' in the menu. (don't think it works right now though, you might have to run it with python3 ~/pi-apps/gui.py)\033[0m"
+echo -e "\033[32m🙏 Thank you for installing Pi Apps for Python! Would you like to remove the installation files? (~/pi-apps-python) (y/n)\033[0m"
+read answer
+if [ answer != "y" ]; then
+    echo "Installation files will be preserved. Bye!
+    exit
+fi
+rm -rf ~/pi-apps-python 
