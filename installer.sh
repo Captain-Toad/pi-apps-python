@@ -45,7 +45,7 @@ echo -e "\033[32m😀 You can now run the Pi Apps for Python front-end by select
 echo -e "\033[32m🙏 Thank you for installing Pi Apps for Python! Would you like to remove the installation files? (~/pi-apps-python) (y/n)\033[0m"
 read answer
 if [ answer != "y" ]; then
-    echo "Installation files will be preserved. Bye!
+    echo "Installation files will be preserved. Bye!"
     exit
 fi
-rm -rf ~/pi-apps-python 
+rm -rf $HOME/pi-apps-python 
