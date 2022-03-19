@@ -16,14 +16,14 @@ Navigate to the new directory with:
 
 Make install.sh executable with:
 
-`chmod +x install.sh`
+`chmod +x installer.sh`
 
 And finally, run install.sh with:
 
-`./install.sh`.
+`./installer.sh`.
 
 If you want to do all of that in one command, try:
 
-`git clone https://github.com/captain-toad/pi-apps-python && cd pi-apps-python && chmod +x install.sh && ./install.sh`.
+`git clone https://github.com/captain-toad/pi-apps-python && cd pi-apps-python && chmod +x installer.sh && ./installer.sh`.
 
 Just let everything install, and you're good to go!
