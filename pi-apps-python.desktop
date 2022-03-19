@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Pi Apps for Python
+Comment=Pi Apps for Python, a front end for Pi Apps written in Python.
+Exec=python3 $HOME/pi-apps/gui.py
+Type=Application
