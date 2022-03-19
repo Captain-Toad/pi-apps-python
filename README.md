@@ -5,6 +5,8 @@ Pi Apps for Python is a front end for pi-apps (which can be found at [Botspot's 
 
 The main reason I am making this is because I love Pi Apps, but I am slightly irritated at yad's terrible draw times. It can take over 5 to 10 seconds to draw a single window. I am using a Python module named [guizero](http://lawsie.github.io/guizero "guizero"), which is essentially Tkinter but with a simpler syntax. (It is based on Tkinter.) It has relatively fast loading times.
 
+I will be heavily relying on the os module to run install/update scripts and get the contents of directories.
+
 ## Installation
 Installation for Pi Apps for Python is simple. I spent about an hour writing a fancy bash script to install PAFP. Clone the repo with:
 
