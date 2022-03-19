@@ -51,4 +51,4 @@ if [ answer2 == "y" ]; then
     exit
 fi
 echo "Installation files will be preserved. Bye!"
-    exit
+exit
