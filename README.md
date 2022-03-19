@@ -29,3 +29,8 @@ If you want to do all of that in one command, try:
 `git clone https://github.com/captain-toad/pi-apps-python && cd pi-apps-python && chmod +x installer.sh && ./installer.sh`.
 
 Just let everything install, and you're good to go!
+
+##Versions
+Pi Apps for Python is still in VERY early development. I started it today (Mar 19) and all I have done is written a basic title and window in the GUI, and an install script. I'll describe this development phase as `pre-prototype`.
+
+I don't believe the .desktop shortcut works right now, so you may have to run it manually (`python3 ~/pi-apps/gui.py`).
