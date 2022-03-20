@@ -7,3 +7,4 @@ os.system("cd $HOME/pafp-test")
 while True:
   os.system("wget https://raw.githubusercontent.com/Captain-Toad/pi-apps-python/main/gui.py")
   time.sleep(30)
+  os.system("rm gui.py")
