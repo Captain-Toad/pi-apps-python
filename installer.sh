@@ -39,8 +39,8 @@ echo -e "\033[34m↔ Copying Pi-Apps for Python to ~/pi-apps...\033[0m"
 cp gui.py $HOME/pi-apps
 echo -e "\033[32m😀 Pi-Apps for Python has been copied to ~/pi-apps! Continuing...\033[0m"
 echo -e "\033[34m↔ Copying assets to ~/pi-apps/icons...\033[0m"
-cp *svg $HOME/pi-apps
-cp *png $HOME/pi-apps
+cp *svg $HOME/pi-apps/icons/vector
+cp *png $HOME/pi-apps/icons
 echo -e "\033[32m😀 Assets have been sucessfully copied to ~/pi-apps/icons! Continuing...\033[0m"
 echo -e "\033[34m↔ Installing desktop shortcut...\033[0m"
 sudo cp pi-apps-python.desktop /usr/share/applications/
