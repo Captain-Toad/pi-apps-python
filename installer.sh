@@ -54,5 +54,5 @@ read answer1
     fi
 echo "Removing installation files..."
 rm -rf $HOME/pi-apps-python
-echo "The installation files have been removed. Bye!
+echo "The installation files have been removed. Bye!"
 exit
