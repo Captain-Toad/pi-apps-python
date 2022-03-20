@@ -20,8 +20,10 @@ def start():
 		print('\033[30m' + "Current working directory: " + os.getcwd() + '\033[0m')
 		cwd = os.getcwd()
 		if cwd != ("$HOME/pi-apps"):
-			print('\033[31m' + "Error: Pi Apps for Python is not installed in the correct directory. Please install the program in the directory: $HOME/pi-apps. Please run ./install.sh." + '\033[0m')
-			quit()
+			print('\033[31m' + "Error: Pi Apps for Python is not installed in the correct directory. Please install the program in the directory: $HOME/pi-apps. Run install.sh, move the files manually, or press i to ignore." + '\033[0m')
+			ignoredirectoryerr = input()
+			if ignoredirectoryerr != "i":
+				quit()
 
 def gui():
     app = guizero.App(title="Pi Apps for Python", width=600, height=300, layout="grid")
