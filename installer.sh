@@ -1,5 +1,4 @@
 clear
-cd $HOME/
 echo -e "\033[36mWelcome to the Pi Apps for Python installer. This will install the Pi Apps for Python front-end on your Linux machine.\033[0m" 
 echo "This installer will install or update the following:"
 echo " - Python3 (if not already installed)"
