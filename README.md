@@ -34,3 +34,6 @@ Just let everything install, and you're good to go!
 Pi Apps for Python is still in VERY early development. I started it today (Mar 19) and all I have done is written a basic title and window in the GUI, and an install script. I'll describe this development phase as `pre-prototype`.
 
 I don't believe the .desktop shortcut works right now, so you may have to run it manually (`python3 ~/pi-apps/gui.py`).
+
+## Bleeding Edge
+To get the bleeding edge release, navigate to the 'dev' branch. Download the ZIP, extract it, run the installer.
