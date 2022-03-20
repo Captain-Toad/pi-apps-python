@@ -26,8 +26,7 @@ def start():
 def gui():
     app = guizero.App(title="Pi Apps for Python", width=600, height=300, layout="grid")
     logo = guizero.Picture(app, image="icons/logo-simple.png", width=100, height=100, grid=[1, 1])
-    logo_text = guizero.Picture(app, image="icons/logo-text.png", width=218, height=80, grid=[2, 1])
-    logo_ext_text = guizero.Text(app, text="for Python", size=30, grid=[5,1])
+    logo_text = guizero.Picture(app, image="icons/vector/logo-ext-text.svg", grid=[2, 1])
     app.display()
 start()
 gui()
