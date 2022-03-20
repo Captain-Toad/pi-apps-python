@@ -4,7 +4,7 @@ echo "This installer will install or update the following:"
 echo " - Python3 (if not already installed)"
 echo " - guizero (through pip3, if not already installed)"
 echo " - pi-apps (if not already installed)"
-echo " - Pi Apps for Python (will be moved to ~/pi-apps)"
+echo " - Pi Apps for Python (and required assets) (will be moved to ~/pi-apps)"
 echo " - A desktop shortcut to the Pi Apps for Python front-end will be installed in /usr/share/applications"
 echo "Are you sure you want to continue? (y/n)"
 read answer
@@ -37,18 +37,21 @@ wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bas
 echo -e "\033[32m😀 pi-apps has been installed or updated! Continuing...\033[0m"
 echo -e "\033[34m↔ Copying Pi-Apps for Python to ~/pi-apps...\033[0m"
 cp gui.py $HOME/pi-apps
-echo -e "\033[32m😀 Pi-Apps for Python has been moved to ~/pi-apps! Continuing...\033[0m"
+echo -e "\033[32m😀 Pi-Apps for Python has been copied to ~/pi-apps! Continuing...\033[0m"
+echo -e "\033[34m↔ Copying assets to ~/pi-apps/icons...\033[0m"
+cp *svg $HOME/pi-apps
+cp *png $HOME/pi-apps
+echo -e "\033[32m😀 Assets have been sucessfully copied to ~/pi-apps/icons! Continuing...\033[0m"
 echo -e "\033[34m↔ Installing desktop shortcut...\033[0m"
 sudo cp pi-apps-python.desktop /usr/share/applications/
 echo -e "\033[32m😀 Desktop shortcut has been installed! Installation Complete!\033[0m"
 echo -e "\033[32m😀 You can now run the Pi Apps for Python front-end by selecting 'Pi Apps for Python' in the menu. (don't think it works right now though, you might have to run it with python3 ~/pi-apps/gui.py)\033[0m"
 echo -e "\033[32m🙏 Thank you for installing Pi Apps for Python! Would you like to remove the installation files? (~/pi-apps-python) (y/n)\033[0m"
-read answer2
-if [ answer2 == "y" ]; then
-    echo "Removing..."
-    rm -rf $HOME/pi-apps-python
-    echo "Files have been removed. Bye!"
-    exit
-fi
-echo "Installation files will be preserved. Bye!"
+read answer1
+    if [ "$answer1" != "y" ]; then
+        echo "The installation has been completed, and installation files have been preserved."
+        exit
+    fi
+echo "Removing installation files..."
+rm -rf $HOME/pi-apps-python
 exit
