@@ -17,7 +17,7 @@ if [ "$answer" != "y" ]; then
         exit
     fi
     echo "Removing..."
-    rm -rf $HOME/pi-apps-python
+    rm -rf ../pi-apps-python
     echo "Files have been removed, and the installation has been aborted."
     exit
 fi
@@ -54,6 +54,6 @@ read answer1
         exit
     fi
 echo "Removing installation files..."
-rm -rf $HOME/pi-apps-python
+rm -rf ../pi-apps-python
 echo "The installation files have been removed. Bye!"
 exit
