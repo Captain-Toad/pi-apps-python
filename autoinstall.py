@@ -4,7 +4,15 @@ import time
 
 os.system("mkdir $HOME/pafp-test")
 os.system("cd $HOME/pafp-test")
-while True:
-  os.system("wget https://raw.githubusercontent.com/Captain-Toad/pi-apps-python/main/gui.py")
-  time.sleep(30)
-  os.system("rm gui.py")
+print("What branch? (dev, main)
+answer = input()
+if answer == "dev":
+  while True:
+    os.system("wget https://raw.githubusercontent.com/Captain-Toad/pi-apps-python/dev/gui.py")
+    time.sleep(30)
+    os.system("rm gui.py")
+else:
+  while True:
+    os.system("wget https://raw.githubusercontent.com/Captain-Toad/pi-apps-python/main/gui.py")
+    time.sleep(30)
+    os.system("rm gui.py")
