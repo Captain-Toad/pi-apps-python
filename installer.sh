@@ -4,7 +4,7 @@ echo "This installer will install or update the following:"
 echo " - Python3 (if not already installed)"
 echo " - guizero (through pip3, if not already installed)"
 echo " - pi-apps (if not already installed)"
-echo " - Pi Apps for Python (and required assets) (will be moved to ~/pi-apps)"
+echo " - Pi Apps for Python (and required assets/fonts) (will be moved to ~/pi-apps)"
 echo " - A desktop shortcut to the Pi Apps for Python front-end will be installed in /usr/share/applications"
 echo "Are you sure you want to continue? (y/n)"
 read answer
@@ -42,6 +42,8 @@ echo -e "\033[34m↔ Copying assets to ~/pi-apps/icons...\033[0m"
 cp *svg $HOME/pi-apps/icons/vector
 cp *png $HOME/pi-apps/icons
 echo -e "\033[32m😀 Assets have been sucessfully copied to ~/pi-apps/icons! Continuing...\033[0m"
+echo -e "\033[34m↔ Installing required fonts...\033[0m"
+sudo cp -r productsans /usr/share/fonts
 echo -e "\033[34m↔ Installing desktop shortcut...\033[0m"
 sudo cp pi-apps-python.desktop /usr/share/applications/
 echo -e "\033[32m😀 Desktop shortcut has been installed! Installation Complete!\033[0m"
