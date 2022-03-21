@@ -4,7 +4,7 @@ import time
 
 os.system("mkdir $HOME/pafp-test")
 os.system("cd $HOME/pafp-test")
-print("What branch? (dev, main)
+print("What branch? (dev, main)")
 answer = input()
 if answer == "dev":
   while True:
