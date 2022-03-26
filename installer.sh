@@ -1,3 +1,5 @@
+#!/bin/bash
+
 clear
 echo -e "\033[36mWelcome to the Pi Apps for Python installer. This will install the Pi Apps for Python front-end on your Linux machine.\033[0m" 
 echo "This installer will install or update the following:"
@@ -41,9 +43,9 @@ echo -e "\033[32m😀 Pi-Apps for Python has been copied to ~/pi-apps! Continuin
 echo -e "\033[34m↔ Copying assets to ~/pi-apps/icons...\033[0m"
 cp *svg $HOME/pi-apps/icons/vector
 cp *png $HOME/pi-apps/icons
+echo -e "\033[32m↔ Copying fonts to /usr/share/fonts...\033[0m"
+sudo cp -r productsans /usr/share/fonts/truetype/
 echo -e "\033[32m😀 Assets have been sucessfully copied to ~/pi-apps/icons! Continuing...\033[0m"
-echo -e "\033[34m↔ Installing required fonts...\033[0m"
-sudo cp -r productsans /usr/share/fonts
 echo -e "\033[34m↔ Installing desktop shortcut...\033[0m"
 sudo cp pi-apps-python.desktop /usr/share/applications/
 echo -e "\033[32m😀 Desktop shortcut has been installed! Installation Complete!\033[0m"
